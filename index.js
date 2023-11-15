@@ -26,23 +26,42 @@ const nestedMuppet = {
 };
 
 // Strings
+const animalSounds = {
+  moo: 'cow',
+  baa: 'sheep',
+  oink: 'pig',
+  cluck: 'chicken',
+  neigh: 'horse'
+};
 
 // 1. Use destructuring to assign appropriate variables based on the sounds animals make.
+const { moo, baa, oink, cluck, neigh } = animalSounds;
 
 // 2. Bolt the horse wandered off, so just give us four animals, and let's name them bessie, dolly, babe, and little.
+const traditionalAnimalNames = { bessie: 'cow', dolly: 'sheep', babe: 'pig', little: 'chicken' };
+const { bessie, dolly, babe, little } = traditionalAnimalNames;
 
-// 3. Little the chicken had to go back to the coop, so now we're left with three. Let's use color variables of blackAndWhite, black, and pink.
+// 3. uses destructuring to declare the three traditional animal colors
+const animalColors = { blackAndWhite: 'cow', black: 'sheep', pink: 'pig' };
+const { blackAndWhite, black, pink } = animalColors;
 
-// Arrays
+// 4. uses destructuring to declare the seven traditional rainbow color variables using the color names
+const [red, orange, yellow, green, blue, indigo, violet] = colors;
 
-// 4. Use destructuring to assign appropriate variables using the color names.
+// 5. uses destructuring to declare six rainbow color variables using initials
+const [r, o, y, g, b,, v] = colors;
 
-// 5. Some people have a really hard time picking out indigo, so let's leave that one out, using the first letter of each color as the variable names.
+// 6. uses destructuring to declare Indigo using indg
+const [, , , , , indg, ] = colors;
 
-// 6. But wait! Indigo is now feeling *super* left out. Let's only assign indigo using indg. 
+// 7. uses destructuring to assign all appropriate variables using the keys as the variable names
+const { muppetName, color, song, job, partner } = muppet;
 
-// Objects
-
-// 7. Use destructuring to assign all variables using the keys as the variable names
-
-// 8. Use destructuring to assign songs 2 and 4, and Kermit's job and partner
+// 8. uses destructuring to assign songs 2 and 4, and Kermit's job and partner
+const {
+  album: {
+    theMuppetMovie: { song2, song4 },
+  },
+  nestedJob,
+  nestedPartner,
+} = nestedMuppet;
